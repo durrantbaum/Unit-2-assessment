@@ -37,6 +37,8 @@ const cart = [
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
+const summedPrice = cart.reduce((accumulator, food) => accumulator + food.price, 0)
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -57,6 +59,10 @@ const cart = [
 
 
 
+function calcFinalPrice(cartTotal, couponValue, tax){
+    return (cartTotal * tax) + cartTotal - couponValue
+}
+console.log(calcFinalPrice(10, 3, .1))
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -80,6 +86,10 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+Customer name because it's an easy way to identify someone. This will be a string because it's just normal text.
+Customer email because I can send them special offers if needed. This will be a string because it will not need to be changed.
+Customer phone number so I can call them if they are placing a to go order. THis will be a string because I'm not performing calculations on it.
+If the Customer is under 3 years old, they will eat free. This will be a boolean value because I can check if they are under 3 and make sure they eat free.
 */
 
 /*
@@ -88,3 +98,11 @@ const cart = [
 */
 
 //CODE HERE
+const cust1 = {
+    name: "John Smith",
+    email: "jsmith@email.com",
+    phonenumber: "888-777-6666",
+    isYoungerThan3: false,
+}
+
+console.log(cust1)
